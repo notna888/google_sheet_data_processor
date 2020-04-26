@@ -1,7 +1,7 @@
 
 
 function load_gsheet_data(url_to_get) {
-  data_fetched = {'head':'Error', 'rows':{'Error':'An error occurred'}}
+  data_fetched = {'head':['Error'], 'rows':[{'Error':'An error occurred'}]}
 
   // Need to come up with some way so I can make these requests without async: false
   $.ajax({
