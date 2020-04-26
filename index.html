@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test Project</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/master.css">
+    <script src="/js/sheet_converter.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+
+    <div id="main_table">
+
+    </div>
+
+    <script type="text/javascript">
+
+      // Here is the original spreadsheet: https://docs.google.com/spreadsheets/d/19GnIHw5Blz2LxKy54OEQn-_DtRZLnI4NFJd-aBf0xNY/edit?usp=sharing
+
+      // You want to file-> publish to web, and then pick export it as a .csv
+      sheet_to_load = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT9n41mX1TIIO_3vL1IxIN6UKQBGSl3EUzDPOwViwW9g2BoJOkfXvhzK_W_RJOC4rGC0pJGll5l374S/pub?output=csv'
+
+      data_wanted = load_gsheet_data(sheet_to_load)
+      div_to_append_to = 'main_table'
+
+      json_dict_to_divs(div_to_append_to, data_wanted)
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,18 @@
+
+
+#main_table {
+  background: darkslategrey;
+  color: cornsilk;
+}
+
+.main_table_row {
+  display: grid;
+}
+
+.header_row{
+  font-weight: bold;
+}
+
+#main_table > div > p {
+
+}
